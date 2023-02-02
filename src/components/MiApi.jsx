@@ -62,7 +62,7 @@ const PokemonList = () => {
                             sortPokemonList();
                             // console.log(pokemonList)
                         }}>
-                            {sortAsc ? "A - Z" : "Z - A"}
+                            {sortAsc ? "Z - A" : "A - Z"}
                         </Button></p>
                     </Form>
 
