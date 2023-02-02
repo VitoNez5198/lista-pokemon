@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Card, Form, InputGroup, FormControl, Button, CardImg } from "react-bootstrap";
+import { Container, Row, Card, Form, InputGroup, FormControl, Button } from "react-bootstrap";
 
 
 const PokemonList = () => {
@@ -30,7 +30,7 @@ const PokemonList = () => {
     }, []);
 
     //Botón Sorting//
-    
+
     const sortPokemonList = () => {
         setSortAsc(!sortAsc);
         setPokemonList(pokemonList.sort((a, b) => {
@@ -61,59 +61,26 @@ const PokemonList = () => {
                             sortPokemonList();
                             // console.log(pokemonList)
                         }}>
-                            {sortAsc ? "Ascendente" : "Descendente"}
+                            {sortAsc ? "A - Z" : "Z - A"}
                         </Button></p>
-
                     </Form>
 
-                    <Col md={4}>
-
+                    <Row md={6} className=" m-1 text-center justify-content-center " >
                         {pokemonList
-
-                            .filter((pokemon) => pokemon.name.includes(searchTerm))
-                            .slice(0, Math.ceil(pokemonList.length / 3))
+                            .filter(pokemon => pokemon.name.includes(searchTerm))
+                            .slice(0, Math.ceil(pokemonList.length /0))
                             .map((pokemon, index) => (
-                                <Card className="my-2" key={index} onClick={() => {
+                                <Card className="m-1" key={index} onClick={() => {
                                     setSelectedPokemon(pokemon);
                                     console.log(pokemon);
                                 }}>
-                                    <Card.Body className="m-1 justify-content-center text-center ">
+                                    <Card.Body className="m-1 justify-content-center text-center">
                                         <img src={pokemon.image} alt={pokemon.name} />
                                         <Card.Title>{pokemon.name}</Card.Title>
                                     </Card.Body>
                                 </Card>
-                            ))};
-
-
-                    </Col>
-                    <Col md={4}>
-                        {pokemonList
-                            .filter(pokemon => pokemon.name.includes(searchTerm))
-                            .slice(Math.ceil(pokemonList.length / 3), 2 * Math.ceil(pokemonList.length / 3))
-                            .map((pokemon, index) => (
-                                <Card className="my-2" key={index} onClick={() => {setSelectedPokemon(pokemon);
-                                    console.log(pokemon);}}>
-                                    <Card.Body className="m-1 justify-content-center text-center">
-                                    <img src={pokemon.image} alt={pokemon.name} />
-                                        <Card.Title>{pokemon.name}</Card.Title>
-                                    </Card.Body>
-                                </Card>
                             ))}
-                    </Col>
-                    <Col md={4}>
-                        {pokemonList
-                            .filter(pokemon => pokemon.name.includes(searchTerm))
-                            .slice(2 * Math.ceil(pokemonList.length / 3))
-                            .map((pokemon, index) => (
-                                <Card className="my-2" key={index} onClick={() =>  {setSelectedPokemon(pokemon);
-                                    console.log(pokemon);}}>
-                                    <Card.Body className="m-1 justify-content-center text-center">
-                                    <img src={pokemon.image} alt={pokemon.name} />
-                                        <Card.Title>{pokemon.name}</Card.Title>
-                                    </Card.Body>
-                                </Card>
-                            ))}
-                    </Col>
+                    </Row>
                 </Row>
             </Container>
         </>
