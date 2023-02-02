@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Card, Form, InputGroup, FormControl, Button } from "react-bootstrap";
 
+//Constantes
 
 const PokemonList = () => {
     const [pokemonList, setPokemonList] = useState([]);
