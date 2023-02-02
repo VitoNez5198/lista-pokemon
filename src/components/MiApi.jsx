@@ -48,7 +48,7 @@ const PokemonList = () => {
     return (
         <>
             <Container>
-                <Row className="mb-5">
+                <Row className="pb-5">
                     <Form className=" py-4 bg-white">
                         <InputGroup className="mb-4 p-3 ">
                             <FormControl
@@ -79,7 +79,7 @@ const PokemonList = () => {
                                         <img src={pokemon.image} alt={pokemon.name} />
                                         <Card.Title>{pokemon.name}</Card.Title>
                                     </Card.Body>
-                                    
+
                                 </Card>
                             ))}
                     </Row>
