@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/VitoNez5198/lista-pokemon/static/css/main.12d7479b.css",
+    "main.js": "/VitoNez5198/lista-pokemon/static/js/main.4aeffae8.js",
+    "index.html": "/VitoNez5198/lista-pokemon/index.html",
+    "main.12d7479b.css.map": "/VitoNez5198/lista-pokemon/static/css/main.12d7479b.css.map",
+    "main.4aeffae8.js.map": "/VitoNez5198/lista-pokemon/static/js/main.4aeffae8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12d7479b.css",
+    "static/js/main.4aeffae8.js"
+  ]
+}
