@@ -29,7 +29,7 @@ const PokemonList = () => {
         fetchData();
     }, []);
 
-    //Botón Sorting//
+    //Funcion Sorting//
 
     const sortPokemonList = () => {
         setSortAsc(!sortAsc);
@@ -67,17 +67,19 @@ const PokemonList = () => {
 
                     <Row md={6} className=" m-1 text-center justify-content-center " >
                         {pokemonList
-                            .filter(pokemon => pokemon.name.includes(searchTerm))
-                            .slice(0, Math.ceil(pokemonList.length /0))
+                            .filter(pokemon => pokemon.name.includes(searchTerm))                            
                             .map((pokemon, index) => (
+
                                 <Card className="m-1" key={index} onClick={() => {
                                     setSelectedPokemon(pokemon);
                                     console.log(pokemon);
                                 }}>
+
                                     <Card.Body className="m-1 justify-content-center text-center">
                                         <img src={pokemon.image} alt={pokemon.name} />
                                         <Card.Title>{pokemon.name}</Card.Title>
                                     </Card.Body>
+                                    
                                 </Card>
                             ))}
                     </Row>
