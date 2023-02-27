@@ -4,4 +4,5 @@ Lista de Pokémon de Kanto
 ## Link página
 https://vitonez5198.github.io/lista-pokemon/
 
-## Video.
+## Video
+https://youtu.be/KWsbNw7gFko
